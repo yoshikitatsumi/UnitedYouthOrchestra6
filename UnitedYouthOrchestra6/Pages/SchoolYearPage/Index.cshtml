@@ -1,0 +1,84 @@
+﻿@page
+@model UnitedYouthOrchestra6.Pages.SchoolYearPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Year6orEarlier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Year7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Year8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Year9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Year10)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Year11)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Year12)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Year13)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolYear[0].Other)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SchoolYear) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year6orEarlier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year10)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year11)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year12)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year13)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Other)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

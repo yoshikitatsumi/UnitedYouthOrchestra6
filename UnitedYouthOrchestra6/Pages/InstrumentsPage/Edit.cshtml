@@ -1,0 +1,100 @@
+﻿@page
+@model UnitedYouthOrchestra6.Pages.InstrumentsPage.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Instrument</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Instrument.Id" />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Violin" /> @Html.DisplayNameFor(model => model.Instrument.Violin)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Viola" /> @Html.DisplayNameFor(model => model.Instrument.Viola)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Cello" /> @Html.DisplayNameFor(model => model.Instrument.Cello)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.DoubleBass" /> @Html.DisplayNameFor(model => model.Instrument.DoubleBass)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Flute" /> @Html.DisplayNameFor(model => model.Instrument.Flute)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Oboe" /> @Html.DisplayNameFor(model => model.Instrument.Oboe)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Clarinet" /> @Html.DisplayNameFor(model => model.Instrument.Clarinet)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Bassoon" /> @Html.DisplayNameFor(model => model.Instrument.Bassoon)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Horn" /> @Html.DisplayNameFor(model => model.Instrument.Horn)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Trumpet" /> @Html.DisplayNameFor(model => model.Instrument.Trumpet)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Trombone" /> @Html.DisplayNameFor(model => model.Instrument.Trombone)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Tuba" /> @Html.DisplayNameFor(model => model.Instrument.Tuba)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.TimpaniPerc" /> @Html.DisplayNameFor(model => model.Instrument.TimpaniPerc)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Instrument.Keyboard" /> @Html.DisplayNameFor(model => model.Instrument.Keyboard)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

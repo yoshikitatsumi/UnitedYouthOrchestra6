@@ -1,0 +1,114 @@
+﻿@page
+@model UnitedYouthOrchestra6.Pages.InstrumentsPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Violin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Viola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Cello)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].DoubleBass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Flute)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Oboe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Clarinet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Bassoon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Horn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Trumpet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Trombone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Tuba)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].TimpaniPerc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].Keyboard)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Instrument) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Violin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Viola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cello)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoubleBass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flute)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oboe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clarinet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bassoon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Horn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trumpet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trombone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tuba)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimpaniPerc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Keyboard)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
